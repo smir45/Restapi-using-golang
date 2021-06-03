@@ -36,7 +36,7 @@ func testDeleteArticles(w http.ResponseWriter, r *http.Request) {
 }
 
 func testAddArticles(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Test DELETE endpoint is working")
+	fmt.Fprintf(w, "Test ADD endpoint is working")
 }
 
 func indexPage(w http.ResponseWriter, r *http.Request) {
