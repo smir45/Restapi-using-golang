@@ -31,6 +31,10 @@ func testPostArticles(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Test POST endpoint is working")
 }
 
+func testDeleteArticles(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Test POST endpoint is working")
+}
+
 func indexPage(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Indexpage Endpoint Hit")
 }
@@ -42,6 +46,7 @@ func handleRequest() {
 	myRouter.HandleFunc("/", indexPage)
 	myRouter.HandleFunc("/articles", allArticles).Methods("GET")
 	myRouter.HandleFunc("/articles", testPostArticles).Methods("POST")
+	myRouter.HandleFunc("/articles", testDeleteArticles).Methods("DELETE")
 	log.Fatal(http.ListenAndServe(":8082", myRouter))
 }
 
