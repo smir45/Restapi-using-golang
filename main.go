@@ -31,7 +31,7 @@ func allArticles(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(articles)
 }
 
-//creating post
+//creating post functions
 func testPostArticles(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Test POST endpoint is working")
 }
