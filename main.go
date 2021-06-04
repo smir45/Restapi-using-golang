@@ -19,6 +19,8 @@ type Article struct {
 
 type Articles []Article
 
+//creating functions
+
 func allArticles(w http.ResponseWriter, r *http.Request) {
 
 	articles := Articles{
