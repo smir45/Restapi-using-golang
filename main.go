@@ -36,6 +36,7 @@ func testPostArticles(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Test POST endpoint is working")
 }
 
+//creating
 func testAddArticles(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "Test ADD endpoint is working")
 }
