@@ -1,6 +1,6 @@
 package main //compulsary object
 
-//importing packages in golang
+//importing packages in golan
 
 import (
 	"encoding/json"
