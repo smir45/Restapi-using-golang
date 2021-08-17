@@ -33,21 +33,22 @@ func allArticles(w http.ResponseWriter, r *http.Request) {
 
 //creating post functions
 func testPostArticles(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Test POST endpoint is working")
+	beego.RegisterController("/", &controllers.IndexController{})
+	
 }
 
 //creating add functions
 func testAddArticles(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Test ADD endpoint is working")
+	beego.RegisterController("/new", &controllers.NewController{})
 }
 
 //creating delete functions
 func testDeleteArticles(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Test DELETE endpoint is working")
+	beego.RegisterController("/delete/: id([0-9]+)", &controllers.DeleteController{})
 }
 
 func indexPage(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Indexpage Endpoint Hit")
+	beego.RegisterController("/", &controllers.IndexController{})
 }
 
 func handleRequest() {
